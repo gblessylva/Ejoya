@@ -1,0 +1,78 @@
+.burger {
+	opacity: 0;
+	transition: all 0.2s;
+
+	@include respond(tab-land) {
+		opacity: 1;
+	}
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	cursor: pointer;
+	z-index: 10;
+
+	&.cross {
+		&:hover {
+			& > span {
+				&::after {
+					top: 0;
+				}
+				&::before {
+					top: 0;
+				}
+			}
+		}
+		transform: translateX(20rem);
+		& > span {
+			& {
+				background: transparent;
+			}
+			&::after {
+				top: 0;
+				transform: rotate(-135deg);
+			}
+			&::before {
+				top: 0;
+				transform: rotate(135deg);
+			}
+		}
+	}
+
+	&:hover {
+		& > span {
+			&::after {
+				top: 1rem;
+			}
+			&::before {
+				top: -1rem;
+			}
+		}
+	}
+
+	& > span {
+		width: 3rem;
+		height: 0.2rem;
+		background-color: #000;
+		position: relative;
+		display: inline-block;
+
+		&::after,
+		&::before {
+			content: '';
+			width: 3rem;
+			height: 0.2rem;
+			position: absolute;
+			left: 0;
+			background-color: #000;
+			transition: all 0.2s;
+		}
+
+		&::after {
+			top: 0.8rem;
+		}
+
+		&::before {
+			top: -0.8rem;
+		}
+	}
+}

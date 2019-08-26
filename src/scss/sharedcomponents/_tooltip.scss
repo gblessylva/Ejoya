@@ -1,0 +1,14 @@
+.tooltip {
+	&.left {
+		@include tooltip(left);
+	}
+	&.top {
+		@include tooltip(top);
+	}
+	&.bottom {
+		@include tooltip(bottom);
+	}
+	&.right {
+		@include tooltip(right);
+	}
+}

@@ -1,0 +1,44 @@
+section.newsletter {
+	grid-row: 4 / 5;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: minmax(2rem, 1fr) max-content minmax(2rem, 1fr);
+	align-items: center;
+	background: url(/inspect/bg-music.png) no-repeat;
+	padding-top: 2rem;
+	background-size: cover;
+	z-index: 50;
+
+	@include respond(tab-port) {
+		grid-template-columns: 1fr;
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
+
+	div.newsletter__content {
+		grid-column: 1 / -1;
+		*:not(:last-child) {
+			margin-bottom: 2.5rem;
+		}
+		h5,
+		h1 {
+			text-align: center;
+		}
+		div.newsletter__input {
+			margin: 0 auto;
+			padding: 0 8rem;
+			width: 40%;
+			@include respond(tab-port) {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+import {
+	ARTIST_NAME_CHANGE,
+	TRACK_TITLE_CHANGE,
+	TRACK_ARTWORK_CHANGE,
+	TRACK_LABEL_CHANGE,
+	TRACK_UPC_CODE_CHANGE,
+	TRACK_IRC_CODE_CHANGE,
+	TRACK_PUBLISHING_HOUSE_CHANGE,
+	TRACK_ORIGINAL_RELEASE_DATE_CHANGE,
+	TRACK_CONSUMER_RELEASE_DATE,
+	TRACK_GENRE_CHANGE,
+	TRACK_CONTRIBUTORS_CHANGE,
+	TRACK_FEATURED_ARTISTS_CHANGE,
+	TRACK_OUTLET_STORES_SELECTION,
+	TRACK_LANGUAGE_CHANGE,
+	TRACK_EXPLICIT_LYRIC_CHANGE,
+	TRACK_COPYRIGHT_YEAR,
+	TRACK_COPYRIGHT_TEXT,
+	TRACK_AUDIO_FILE_WAV,
+	TRACK_SUBMISSION_FAILURE,
+	TRACK_SUBMISSION_PENDING,
+	TRACK_SUBMISSION_SUCCESS,
+	RELEASE_PENDING,
+	RELEASE_FAILURE,
+	RELEASE_SUCCESS,
+	UPLOAD_PROGRESS_UPATE,
+	TRACK_RELEASE_TYPE_CHANGE,
+} from '../actions/types';
+import createReducer from './reducerCreator';
+
+export default createReducer(
+	{
+		outlet_stores: { 'Apple Music': false, spotify: false, tidal: false, deezer: false },
+		uploadObjState: { percentage: 0, uploadSize: 0 },
+		genre: 'hiphop',
+		language: 'english',
+	},
+	{
+		[ARTIST_NAME_CHANGE]: (state, { payload }) => ({ ...state, artistName: payload }),
+		[TRACK_TITLE_CHANGE]: (state, { payload }) => ({ ...state, trackTitle: payload }),
+		[TRACK_ARTWORK_CHANGE]: (state, { payload }) => ({ ...state, artwork: payload }),
+		[TRACK_LABEL_CHANGE]: (state, { payload }) => ({ ...state, label: payload }),
+		[TRACK_UPC_CODE_CHANGE]: (state, { payload }) => ({ ...state, upc_code: payload }),
+		[TRACK_IRC_CODE_CHANGE]: (state, { payload }) => ({ ...state, irc_code: payload }),
+		[TRACK_PUBLISHING_HOUSE_CHANGE]: (state, { payload }) => ({ ...state, publishing_house: payload }),
+		[TRACK_ORIGINAL_RELEASE_DATE_CHANGE]: (state, { payload }) => ({ ...state, original_release_date: payload }),
+		[TRACK_CONSUMER_RELEASE_DATE]: (state, { payload }) => ({ ...state, consumer_release_date: payload }),
+		[TRACK_GENRE_CHANGE]: (state, { payload }) => ({ ...state, genre: payload }),
+		[TRACK_CONTRIBUTORS_CHANGE]: (state, { payload }) => ({ ...state, contributors: payload }),
+		[TRACK_FEATURED_ARTISTS_CHANGE]: (state, { payload }) => ({ ...state, featured_artists: payload }),
+		[TRACK_LANGUAGE_CHANGE]: (state, { payload }) => ({ ...state, language: payload }),
+		[TRACK_COPYRIGHT_YEAR]: (state, { payload }) => ({ ...state, copyright_year: payload }),
+		[TRACK_COPYRIGHT_TEXT]: (state, { payload }) => ({ ...state, copyright_text: payload }),
+		[TRACK_AUDIO_FILE_WAV]: (state, { payload }) => ({ ...state, audio_file: payload }),
+		[TRACK_EXPLICIT_LYRIC_CHANGE]: (state, { payload }) => ({ ...state, explicit_lyric: payload }),
+		[TRACK_OUTLET_STORES_SELECTION]: (state, { payload }) => {
+			return {
+				...state,
+				outlet_stores: { ...state.outlet_stores, [payload]: state.outlet_stores[payload] ? false : true },
+			};
+		},
+		[TRACK_SUBMISSION_FAILURE]: (state, { payload }) => ({
+			...state,
+			track_upload_error: payload,
+			track_upload_pending: false,
+		}),
+		[TRACK_SUBMISSION_PENDING]: state => ({ ...state, track_upload_error: '', track_upload_pending: true }),
+		[TRACK_SUBMISSION_SUCCESS]: (state, { payload }) => ({
+			...state,
+			track: payload,
+			track_upload_error: '',
+			track_upload_pending: false,
+		}),
+		[RELEASE_FAILURE]: (state, { payload }) => ({ ...state, release_error: payload, release_pending: false }),
+		[RELEASE_PENDING]: state => ({ ...state, release_error: '', release_pending: true }),
+		[RELEASE_SUCCESS]: (state, { payload }) => ({
+			...state,
+			release_error: '',
+			release_pending: false,
+			release: payload,
+		}),
+		[UPLOAD_PROGRESS_UPATE]: (state, { payload }) => ({
+			...state,
+			uploadObjState: payload,
+		}),
+		[TRACK_RELEASE_TYPE_CHANGE]: (state, { payload }) => ({
+			...state,
+			release_type: payload,
+		}),
+	}
+);

@@ -1,0 +1,12 @@
+main.landing-layout {
+	display: grid;
+	// grid-template-columns:
+	// 	[col-padding1-start] minmax(10rem, 1fr) [col-padding1-end] repeat(
+	// 		8,
+	// 		[col-start] minmax(min-content, 14rem) [col-end]
+	// 	)
+	// 	[col-padding2-start]minmax(10rem, 1fr) [col-padding2-end];
+	grid-template-columns: 100vw;
+	grid-template-rows: repeat(2, 100vh) 200vh repeat(2, 50vh);
+	overflow-x: hidden;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>D1E49832-4B22-4DD9-97A7-0E6641795072</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Schedule-New-(1)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-78.000000, -640.000000)">
+        <g id="Sidebar">
+            <g id="Settings" transform="translate(38.000000, 626.000000)">
+                <g id="ic_settings" transform="translate(39.000000, 13.000000)">
+                    <rect id="Background" x="0" y="0" width="24" height="24"></rect>
+                    <g id="settings" stroke="#000000" stroke-width="2">
+                        <g transform="translate(2.000000, 2.000000)">
+                            <circle id="Oval-11" cx="10" cy="10" r="3"></circle>
+                            <circle id="Oval-12" cx="10" cy="10" r="8"></circle>
+                            <path d="M10,2 L10,0" id="Line" stroke-linecap="round"></path>
+                            <path d="M10,20 L10,18" id="Line-Copy" stroke-linecap="round"></path>
+                            <path d="M3.48959236,4.28248558 L3.48959236,2.28248558" id="Line" stroke-linecap="round" transform="translate(3.989592, 3.282486) rotate(-45.000000) translate(-3.989592, -3.282486) "></path>
+                            <path d="M16.2175144,17.0104076 L16.2175144,15.0104076" id="Line-Copy" stroke-linecap="round" transform="translate(16.717514, 16.010408) rotate(-45.000000) translate(-16.717514, -16.010408) "></path>
+                            <path d="M0.5,10.5 L0.5,8.5" id="Line" stroke-linecap="round" transform="translate(1.000000, 9.500000) rotate(-90.000000) translate(-1.000000, -9.500000) "></path>
+                            <path d="M18.5,10.5 L18.5,8.5" id="Line-Copy" stroke-linecap="round" transform="translate(19.000000, 9.500000) rotate(-90.000000) translate(-19.000000, -9.500000) "></path>
+                            <path d="M2.78248558,17.0104076 L2.78248558,15.0104076" id="Line" stroke-linecap="round" transform="translate(3.282486, 16.010408) rotate(-135.000000) translate(-3.282486, -16.010408) "></path>
+                            <path d="M15.5104076,4.28248558 L15.5104076,2.28248558" id="Line-Copy" stroke-linecap="round" transform="translate(16.010408, 3.282486) rotate(-135.000000) translate(-16.010408, -3.282486) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

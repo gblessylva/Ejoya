@@ -1,0 +1,152 @@
+%strengthchecker-styles {
+	display: inline-block;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+	height: 2px;
+	border-radius: 2px;
+	&:not(:last-child) {
+		width: 9.8rem;
+		background-color: var(--grey-color-3);
+	}
+}
+
+main.createacct {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 15vh 1fr;
+	height: 100vh;
+	// overflow-y: hidden;
+	section.logo-box {
+		grid-row: 1 / 2;
+		grid-column: 1 /2;
+		padding-left: 3rem;
+		z-index: 10;
+
+		/*when modifying logo keep in mind inherent image aspect ratio of images */
+		div.ejoya-box {
+			height: 28%;
+			width: 9rem;
+			height: 4rem;
+			margin-top: 4rem;
+			background: url('/inspect/ejoya-logo3.svg') no-repeat;
+			background-size: contain;
+		}
+	}
+
+	section.createacct_formbox {
+		grid-row: 1 / -1;
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		grid-template-rows: 0.12fr 1fr;
+
+		@include respond(phone) {
+			grid-template-columns: 1fr;
+		}
+
+		div.creactacct__form {
+			@include respond(phone) {
+				grid-column: 1 / -1;
+				grid-row: 2 / 3;
+
+				h1,
+				h6 {
+					text-align: center;
+				}
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				form {
+					width: 90% !important;
+				}
+			}
+
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 3.5rem;
+			@include respond(phone) {
+				padding-left: 1.5rem;
+			}
+			padding-top: 1.5rem;
+			div.heading__text {
+				margin-bottom: 5rem;
+				margin-top: 8rem;
+				h1 {
+					margin-bottom: 0.8rem;
+				}
+			}
+
+			form {
+				display: flex;
+				width: 55%;
+				height: 100%;
+				flex-direction: column;
+				label {
+					margin-bottom: 1.5rem;
+					&:not(:first-child) {
+						margin-top: 2rem;
+					}
+				}
+
+				@include toggleTooltip(stage-name);
+				@include toggleTooltip(artist-password);
+				.form-group {
+					& + label {
+						margin-top: 0.5rem;
+					}
+				}
+			}
+
+			div.validation__bars {
+				margin-bottom: 3.5rem;
+
+				p {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+					& > * {
+						@extend %strengthchecker-styles;
+					}
+
+					& > span:last-child {
+						margin-top: -0.7rem;
+					}
+				}
+
+				p.Weak {
+					& > span:first-child {
+						background-color: var(--primary-color);
+					}
+				}
+
+				p.Strong {
+					& > span:nth-child(-n + 3) {
+						background-color: var(--color-green);
+					}
+				}
+
+				p.Fair {
+					& > span:nth-child(-n + 2) {
+						background-color: var(--color-yellow);
+					}
+				}
+			}
+		}
+
+		div.bg__image-box {
+			grid-area: 1 / 2 / -1 / -1;
+			margin: 0.2rem;
+			margin-left: 0;
+			margin-bottom: 0;
+			border: 1px solid transparent;
+			border-radius: 0.5rem;
+			overflow: hidden;
+		}
+	}
+}

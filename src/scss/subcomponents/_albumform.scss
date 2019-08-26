@@ -1,0 +1,57 @@
+div.album-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6.1rem;
+
+	@include respond(tab-port) {
+		margin-top: 4rem;
+	}
+
+	div.input-addon {
+		position: relative;
+		input {
+			width: 100%;
+		}
+		svg {
+			position: absolute;
+			top: 30%;
+			right: 5%;
+			transform: scale(2);
+			cursor: pointer;
+			color: var(--grey-color-6);
+		}
+	}
+
+	label[class*='radio'] {
+		width: 50%;
+	}
+
+	.consumer-release,
+	.original-release {
+		display: none;
+	}
+
+	input#release-radio-1:checked ~ div.input-radio--1-group label.radio-yes {
+		@extend %radio-style;
+	}
+
+	input#release-radio-1:checked ~ div.original-release {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input#release-radio-2:checked ~ div.consumer-release,
+	input#release-radio-2:checked ~ div.original-release {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input#release-radio-2:checked ~ div.input-radio--1-group label.radio-no {
+		@extend %radio-style;
+	}
+
+	@include toggleTooltip(label-name);
+	@include toggleTooltip(upc-code);
+	@include toggleTooltip(irc-code);
+	@include toggleTooltip(publish-house);
+}

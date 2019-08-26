@@ -1,0 +1,50 @@
+//abstracts import
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+//base imports
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+//shared components between components
+@import 'sharedcomponents/input-button';
+@import 'sharedcomponents/gradient-btn';
+@import 'sharedcomponents/carousel';
+@import 'sharedcomponents/tooltip';
+@import 'sharedcomponents/notification';
+@import 'sharedcomponents/upload-tracker';
+@import 'sharedcomponents/burger';
+
+//component imports
+@import 'components/header';
+@import 'components/navbar';
+@import 'components/button';
+@import 'components/header-content';
+@import 'components/upload-section';
+@import 'components/socialsandpayment-section';
+@import 'components/newsletter';
+@import 'components/footer';
+@import 'components/createacct';
+@import 'components/dashboard';
+@import 'components/newrelease';
+@import 'components/artisthompage';
+@import 'components/analyticpage';
+@import 'components/teampage';
+@import 'components/musicmonitor';
+@import 'components/paymentplan';
+@import 'components/teampage2';
+@import 'components/comingsoon';
+
+// subcomponents utilized by the parent components
+@import 'subcomponents/artistform';
+@import 'subcomponents/albumform';
+@import 'subcomponents/recordinfoform';
+@import 'subcomponents/metadata';
+@import 'subcomponents/musicmetric';
+@import 'subcomponents/musicregion';
+
+//landing layout
+@import 'layout/landinglayout';

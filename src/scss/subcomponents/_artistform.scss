@@ -1,0 +1,80 @@
+div.artist-form {
+	margin-top: 6.1rem;
+	display: flex;
+	flex-direction: column;
+
+	@include respond(tab-port) {
+		margin-top: 4rem;
+	}
+
+	div.uploadpanel {
+		@include shakeContainerWhenErrorOccurs;
+		&[class*='success'] {
+			border: 2px dashed var(--color-green);
+		}
+
+		height: 15.8rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--grey-color-5);
+		border: 2px dashed var(--color-light-blue);
+		border-radius: 0.4rem;
+		margin-bottom: 5.1rem;
+		position: relative;
+
+		.backdrop {
+			@include backdrop;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			svg {
+				transform: scale(9) translateY(0.5rem);
+				opacity: 0;
+				fill: rgba(255, 255, 255, 0.85);
+				color: rgba(#c85b80, 0.9);
+				cursor: pointer;
+				z-index: 10;
+				transition: all 0.5s;
+			}
+
+			&:hover svg {
+				transform: scale(9) translateY(0);
+				opacity: 1;
+			}
+
+			&:hover + .upload-image {
+				filter: blur(2px) brightness(80%);
+			}
+		}
+
+		label.add-artwork {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 26.3rem;
+			@include respond(tab-port) {
+				width: 20rem;
+			}
+			height: 4.8rem;
+			background-color: var(--color-white);
+			border: 1px solid var(--color-light-blue);
+			border-radius: 0.4rem;
+			cursor: pointer;
+		}
+
+		img.upload-image {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@include toggleTooltip(artist-name);
+	@include toggleTooltip(uploadpanel);
+}

@@ -1,0 +1,39 @@
+div.metadata-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6.1rem;
+
+	@include respond(tab-port) {
+		margin-top: 4rem;
+	}
+
+	.upload-track {
+		height: 4.8rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include shakeContainerWhenErrorOccurs();
+		border: 1px dashed var(--color-light-blue);
+		border-radius: 4px;
+		&[class*='success'] {
+			border: 1px dashed var(--color-green);
+		}
+		cursor: pointer;
+	}
+
+	label[class*='radio'] {
+		width: 50%;
+	}
+
+	#radio-1:checked ~ label.radio-yes {
+		@extend %radio-style;
+	}
+
+	#radio-2:checked ~ label.radio-no {
+		@extend %radio-style;
+	}
+
+	@include toggleTooltip(explicit-words);
+	@include toggleTooltip(upload-box);
+}

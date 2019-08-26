@@ -1,0 +1,113 @@
+@mixin input-placeholderandvalidation {
+	&::placeholder {
+		color: var(--grey-color-1);
+		font-size: 1.5rem;
+		font-family: var(--font-display-5);
+	}
+
+	&:focus:invalid {
+		border: 1px solid var(--primary-color);
+	}
+}
+
+@mixin backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	background-color: rgba(#c85b80, 0.15);
+}
+
+@mixin tooltip($position: null) {
+	@if ($position==top) {
+		transform: translateY(-3rem);
+	} @else if($position==bottom) {
+		transform: translateY(3rem);
+	} @else if($position==right) {
+		@extend %tool-tip;
+		top: 50%;
+		right: -50%;
+		transform: translateY(-40%);
+	} @else if($position==left) {
+		transform: translateX(-3rem);
+	}
+}
+
+@mixin toggleTooltip($id: null) {
+	@if ($id != null) {
+		##{$id}:focus:invalid + .tooltip,
+		##{$id}:hover + .tooltip {
+			opacity: 1;
+		}
+
+		##{$id}:focus:valid + .tooltip {
+			opacity: 0;
+		}
+
+		##{$id} + .tooltip {
+			opacity: 0;
+		}
+	}
+}
+
+@mixin shakeContainerWhenErrorOccurs {
+	&[class*='error-'] {
+		border: 2px dashed var(--primary-color);
+		animation: earthquake 0.7s ease-out;
+
+		.tooltip {
+			opacity: 1;
+		}
+	}
+}
+
+//MEDIA QUERY MANAGER
+// phone -  max-width 600px
+// tab-phone - max-width  900px
+// tab-landscape - max-width 1200px
+// big-desktop -  min-width 1800px
+
+//notes --> the comparative advantage of utilizing this method is because it can be changed easily from this file
+// i.e the breakpoints, in comparison to having them in separate files.
+//
+
+@mixin respond($breakpoint) {
+	@if ($breakpoint == small-android) {
+		@media only screen and (max-width: 20em) {
+			// less or equal to 320px;
+			@content;
+		}
+	}
+	@if ($breakpoint == phone) {
+		@media only screen and (max-width: 37.5em) {
+			// less or equql to 600px
+			@content;
+		}
+	}
+	@if ($breakpoint == android-phone) {
+		@media only screen and (max-width: 50em) {
+			//less or equal to 500px
+			@content;
+		}
+	}
+	@if ($breakpoint == tab-port) {
+		@media only screen and (max-width: 56.25em) {
+			// less or equal to 900px
+			@content;
+		}
+	}
+	@if ($breakpoint == tab-land) {
+		@media only screen and (max-width: 75em) {
+			//less or equal to 1200px
+			@content;
+		}
+	}
+	@if ($breakpoint == big-desktop) {
+		//greater or equal to 1800px
+		@media only screen and (min-width: 112.5em) {
+			@content;
+		}
+	}
+}

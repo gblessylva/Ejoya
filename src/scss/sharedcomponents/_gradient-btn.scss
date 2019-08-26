@@ -1,0 +1,15 @@
+button.gradient-btn {
+	height: 1fr;
+	width: 100%;
+	background-image: var(--button-gradient);
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: var(--color-white);
+	font-family: var(--default-font);
+	font-size: 1.8rem;
+	font-weight: 800;
+	line-height: 2.2rem;
+	border-radius: 3px;
+	padding: 1.5rem;
+}

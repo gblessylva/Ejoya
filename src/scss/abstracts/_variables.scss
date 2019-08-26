@@ -1,0 +1,61 @@
+:root {
+	/*COLORS*/
+	--color-white: #fff;
+	--color-white-1: #f2f5f6;
+	--primary-color: #e5396b;
+	--primary-color-light: #c85b80;
+	--primary-color-light-1: #c598a7;
+	--primary-color-light-2: #ffedf3;
+	--color-light-blue: #d4dee2;
+	--color-green: #50e3c2;
+	--color-yellow: #fbc05a;
+	--grey-color-1: #999;
+	--grey-color-2: #eee;
+	--grey-color-3: #d4dee2;
+	--grey-color-4: #d8d8d8;
+	--grey-color-5: #f2f5f6;
+	--grey-color-6: #808fa3;
+	--grey-color-7: #dfe7ea;
+	--grey-color-8: rgba(212, 222, 226, 0.31);
+	--grey-color-9: #dde5e8;
+	--grey-color-10: #ffefd4;
+	--grey-color-11: #979d9f;
+	--grey-color-12: #4a4a4a;
+
+	/*GRADIENTS*/
+	--default-background-gradient: linear-gradient(270deg, #e5396b, #c85b80);
+	--landing-header-gradient: linear-gradient(135deg, #1e1e1e, #030303f5, #000000, #000000, #000000, #000000);
+	--btn-transparent-gradient: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.12) 50%);
+	--landing-btn-gradient: linear-gradient(to right top, #69d9d1, #f12960, #f8d96c);
+	--upload-section-gradient: linear-gradient(to right top, #f4285f, #f9ac67);
+	--socials-section-gradient: linear-gradient(to right bottom, #f4285f, #4cefdf);
+	--payment-section-gradient: linear-gradient(to right top, #fbc05a, #4cefdf);
+	--footer-gradient: linear-gradient(to right top, #000000, #000000, #000000, #030303f5, #030303f5, #1e1e1e);
+	--button-gradient: linear-gradient(270deg, #e5396b 0%, #c85b80 100%);
+	--dashboard-home-artist-gradient: linear-gradient(270deg, #e5396b 0%, #c85b80 100%);
+	--fading-box-gradient: linear-gradient(
+		to right,
+		transparent 35%,
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+	);
+
+	/*FONTS*/
+	--default-font: 'Montserrat', sans-serif;
+	--font-display-2: 'Octarine Light', sans-serif;
+	--font-display-3: 'Octarine Bold', sans-serif;
+	--font-display-4: 'Gill Sans Pro Medium', sans-serif;
+	--font-display-5: 'Gill Sans Pro Medium italic', sans-serif;
+	--font-display-6: 'Gill Sans Pro Light', sans-serif;
+
+	/* BOX SHADOW */
+	--box-shadow-1: 0 0 0.2rem var(--grey-color-2);
+	--box-shadow-2: 0 1 1rem rgba(0, 0, 0, 0.25);
+	--box-shadow-3: 0 2rem 5rem rgba(0, 0, 0, 0.25);
+	--box-shadow-4: 0 1rem 1.5rem 0 rgba(229, 57, 107, 0.25);
+	--box-shadow-5: 0 1rem 3rem 0 rgba(229, 57, 107, 0.25);
+	--box-shadow-6: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+	--box-shadow-7: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.11);
+	--dashboard-box-shadow: 0 1.1rem 2.7rem 0 rgba(116, 119, 120, 0.09);
+	--thumbnail-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}

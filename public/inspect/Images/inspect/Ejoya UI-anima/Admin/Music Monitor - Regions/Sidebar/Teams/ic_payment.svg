@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>8FE245C7-4A5E-46E2-8E5C-FF9B6C561D89</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Music-Monitor---Regions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-77.000000, -526.000000)">
+        <g id="Sidebar">
+            <g id="Teams" transform="translate(38.000000, 510.000000)">
+                <g id="ic_payment" transform="translate(38.000000, 12.000000)">
+                    <rect id="Background" x="0" y="0" width="24" height="24"></rect>
+                    <g id="Group" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <g transform="translate(2.000000, 5.000000)">
+                            <rect id="Rectangle-2" x="0" y="0" width="20" height="14"></rect>
+                            <path d="M0,5 L20.0249844,5" id="Line"></path>
+                            <path d="M16,9 L10,9" id="Line"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

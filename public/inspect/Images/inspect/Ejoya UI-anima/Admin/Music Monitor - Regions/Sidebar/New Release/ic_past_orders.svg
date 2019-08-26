@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>465F7359-92EA-467C-855A-271CE131DB3E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Music-Monitor---Regions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-69.000000, -288.000000)">
+        <g id="Sidebar">
+            <g id="New-Release" transform="translate(39.000000, 271.000000)">
+                <g id="ic_past_orders" transform="translate(29.000000, 13.000000)">
+                    <rect id="Background" x="0" y="0" width="24" height="24"></rect>
+                    <g id="Group" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <g transform="translate(2.000000, 5.000000)">
+                            <path d="M6,7 L6,0 L6,0 L14,0 L14,1 M14,7 L14,14 L6,14 L6,13" id="Rectangle-2"></path>
+                            <polyline id="Path-2" points="17 0 20 4 17 8"></polyline>
+                            <path d="M20,4 L10,4" id="Line"></path>
+                            <polyline id="Path-2-Copy" transform="translate(1.500000, 10.000000) scale(-1, 1) translate(-1.500000, -10.000000) " points="0 6 3 10 0 14"></polyline>
+                            <path d="M10,10 L0,10" id="Line-Copy" transform="translate(5.000000, 10.500000) scale(-1, 1) translate(-5.000000, -10.500000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

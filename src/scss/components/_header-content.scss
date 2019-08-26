@@ -1,0 +1,67 @@
+.header__content {
+	grid-row: 2 / 3;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	overflow: hidden;
+	z-index: 2;
+	div.header__note-wrapper {
+		grid-column: 1 / -1;
+		grid-row: 1 /-1;
+		display: grid;
+		grid-template-columns: 35vw;
+		@include respond(tab-port) {
+			grid-template-columns: 45vw;
+		}
+		@include respond(big-desktop) {
+			grid-template-columns: 25vw;
+		}
+		@include respond(phone) {
+			grid-template-columns: 80vw;
+		}
+	}
+	div.header__content-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		*:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+
+		h1 {
+			@include respond(tab-land) {
+				font-size: 3.5rem;
+			}
+			@include respond(phone) {
+				font-size: 3rem;
+			}
+		}
+
+		p {
+			color: var(--grey-color-1);
+			font-size: 1.6rem;
+			@include respond(tab-port) {
+				font-size: 1.5rem;
+			}
+
+			font-family: var(--font-display-4);
+		}
+	}
+	.input-btn-box {
+		width: 100%;
+		@include respond(tab-port) {
+		}
+	}
+}
+
+div.header__content-image {
+	background: linear-gradient(rgba(#e5396b, 0.5), rgba(#c85b80, 0.5)), url('/inspect/auth-bg.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}

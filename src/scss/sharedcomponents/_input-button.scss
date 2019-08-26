@@ -1,0 +1,40 @@
+div.inputbutton {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	&:hover,
+	&:focus {
+		box-shadow: var(--box-shadow-1);
+	}
+
+	input {
+		width: 80%;
+		height: 100%;
+		border: 1px solid var(--color-white);
+		border-radius: 0px;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+		padding-left: 2rem;
+		color: var(--color-white);
+		outline: none;
+		font-family: var(--default-font);
+		font-size: 1.5rem;
+		@include input-placeholderandvalidation;
+	}
+	button {
+		width: 20%;
+		height: 100%;
+		border: 1px solid transparent;
+		border-radius: 0px;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+		background-image: var(--landing-btn-gradient);
+		outline: none;
+		cursor: pointer;
+
+		svg.inputbutton__icon {
+			transform: scale(4);
+			fill: var(--color-white);
+		}
+	}
+}

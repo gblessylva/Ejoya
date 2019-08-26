@@ -1,0 +1,12 @@
+btn:link,
+.btn:link,
+.btn:visited {
+	transition: all 0.2s;
+}
+
+.btn-transparent {
+	background-image: var(--btn-transparent-gradient);
+	border: 1px solid var(--color-white);
+	border-radius: 0.5rem;
+	padding: 1rem;
+}

@@ -1,0 +1,118 @@
+/*TEXT COLOR*/
+.text-white {
+	color: var(--color-white) !important;
+}
+
+.text-grey {
+	color: var(--grey-color-1) !important;
+}
+
+/* FONT WEIGHT */
+.font-weight--3 {
+	font-weight: 300;
+}
+
+.font-weight--5 {
+	font-weight: 500;
+}
+
+.font-weight--6 {
+	font-weight: 600;
+}
+
+.font-weight--8 {
+	font-weight: 800;
+}
+
+/*FONT LETTER SPACING*/
+.letter-spread--1 {
+	letter-spacing: 0.35rem !important;
+}
+
+.letter-spread--2 {
+	letter-spacing: 0.3rem !important;
+}
+
+/*FONT STYLE*/
+.font-italic {
+	font-style: italic;
+}
+
+/*FONT SIZE */
+.big-text {
+	font-size: 4.8rem;
+}
+
+.subtitle {
+	font-size: 2.4rem;
+}
+
+/*INPUT BACKGROUND COLORS*/
+.input-transparent {
+	background-color: transparent !important;
+	color: var(--color-white) !important;
+}
+
+.input-white {
+	background-color: var(--color-white) !important;
+	color: var(--color-grey) !important;
+}
+
+/*BOX SHADOW*/
+.box-shadow-bg {
+	box-shadow: var(--box-shadow-3);
+}
+
+/*LINE HEIGHT*/
+.line-height--1 {
+	line-height: 3.6rem;
+}
+
+.line-height--2-9 {
+	line-height: 2.9rem;
+}
+
+.line-height--1-5 {
+	line-height: 1.5rem;
+}
+
+/* MARGIN-BOTTOM */
+.margin-bottom--1 {
+	margin-bottom: 1rem;
+}
+
+.margin-bottom--1-5 {
+	margin-bottom: 1.5rem;
+}
+
+.margin-bottom--2-4 {
+	margin-bottom: 2.4rem;
+}
+
+.margin-top--3-1 {
+	margin-bottom: 3.1rem !important;
+}
+
+.margin-bottom--4-3 {
+	margin-bottom: 4.3rem;
+}
+
+/*MARGIN-TOP*/
+.margin-top--1-5 {
+	margin-top: 1.5rem !important;
+}
+
+.margin-top--2-4 {
+	margin-top: 2.4rem !important;
+}
+
+/* DISPLAYS */
+.hide {
+	display: none;
+}
+
+/*grid positionings*/
+
+.align-self {
+	align-self: center;
+}

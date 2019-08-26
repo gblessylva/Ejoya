@@ -1,0 +1,52 @@
+.record-infoform {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6.1rem;
+
+	@include respond(tab-port) {
+		margin-top: 4rem;
+	}
+
+	div.selection-form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+
+		@include respond(tab-port) {
+			label > div {
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+	@include toggleTooltip(composer-name);
+	@include toggleTooltip(contributors-name);
+}
+
+div.double-input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	p {
+		margin: 0 0.5rem;
+	}
+	input {
+		margin-bottom: 0 !important;
+		@include respond(tab-port) {
+			width: 12rem;
+		}
+	}
+}
+
+#checkbox-apple:checked ~ label.apple {
+	@extend %radio-style;
+}
+#checkbox-deezer:checked ~ label.deezer {
+	@extend %radio-style;
+}
+#checkbox-spotify:checked ~ label.spotify {
+	@extend %radio-style;
+}
+#checkbox-tidal:checked ~ label.tidal {
+	@extend %radio-style;
+}

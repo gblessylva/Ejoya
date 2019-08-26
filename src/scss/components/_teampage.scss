@@ -1,0 +1,12 @@
+main.teampage {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: min-content min-content;
+	grid-row-gap: 10rem;
+
+	div.teampage__heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

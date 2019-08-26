@@ -1,0 +1,29 @@
+.header {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	background-image: url(/inspect/Bitmap.png), var(--landing-header-gradient);
+
+	@include respond(tab-land) {
+		background-color: #030303f5;
+		padding-left: 10vh;
+	}
+
+	@include respond(phone) {
+		background-color: #030303f5;
+		padding-left: 5vh;
+	}
+
+	@include respond(tab-port) {
+		background-image: url(/inspect/Bitmap.png), var(--landing-header-gradient);
+		background-position-x: 70%;
+	}
+
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-size: auto 115%;
+	display: grid;
+	grid-template-rows: min-content 1fr;
+	grid-row-gap: 3rem;
+	padding-left: 19vh;
+	padding-top: 4vh;
+}
